@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lofix - Manteniment Informàtic</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-top">
+            <div class="logo-area">
+                <h1 class="logo-text">LO<span class="logo-accent-1">F</span><span class="logo-accent-2">IX</span></h1>
+                <small>SOLUCIONS INTEGRALS</small>
+            </div>
+            <div class="company-info">
+                <p>Carrer de la Tecnologia, 42, 08022 Barcelona<br>
+                NIF: B-67890123 | Tel: <strong>93 456 78 90</strong><br>
+                <a href="mailto:suport@lofix.cat" class="email-link">suport@lofix.cat</a></p>
+            </div>
+        </div>
+        <nav>
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="#">Inici</a></li>
+                    <li><a href="#">Tarifes</a></li>
+                    <li><a href="#">Qui som</a></li>
+                    <li><a href="#">Contacte</a></li>
+                    <li><a href="#" class="active-nav">Envia la teva incidència</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="form-container">
+                <h2>Envia la teva incidència</h2>
+                <p>Si us plau, detalla el problema tècnic i un especialista es posarà en contacte amb tu.</p>
+                
+                <form action="#" method="post">
+                    
+                    <fieldset>
+                        <legend>Dades del Client</legend>
+                        <div class="form-group">
+                            <label for="nom">Nom complet *</label>
+                            <input type="text" id="nom" name="nom" required placeholder="Ex: Joan Garcia">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correu electrònic *</label>
+                            <input type="email" id="email" name="email" required placeholder="joan@exemple.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">Telèfon de contacte *</label>
+                            <input type="tel" id="tel" name="tel" required placeholder="600 000 000">
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Identificació de l'Equip</legend>
+                        <div class="form-group">
+                            <label for="equip">Marca / Model *</label>
+                            <input type="text" id="equip" name="equip" required placeholder="Ex: HP Pavilion 15">
+                        </div>
+                        <div class="form-group">
+                            <label>Sistema Operatiu *</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="so" value="windows" required> Windows</label>
+                                <label><input type="radio" name="so" value="linux"> Linux</label>
+                                <label><input type="radio" name="so" value="macos"> macOS</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipus">Tipus d'equip</label>
+                            <select id="tipus" name="tipus">
+                                <option value="sobretaula">Sobretaula</option>
+                                <option value="portatil">Portàtil</option>
+                                <option value="servidor">Servidor</option>
+                            </select>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Components afectats (Selecció múltiple)</legend>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="comp" value="disc"> Disc dur / SSD</label>
+                            <label><input type="checkbox" name="comp" value="ram"> Memòria RAM</label>
+                            <label><input type="checkbox" name="comp" value="cpu"> Processador</label>
+                            <label><input type="checkbox" name="comp" value="font"> Font alimentació</label>
+                            <label><input type="checkbox" name="comp" value="gpu"> Targeta gràfica</label>
+                            <label><input type="checkbox" name="comp" value="placa"> Placa base</label>
+                        </div>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Descripció de l'Avaria</legend>
+                        <div class="form-group">
+                            <label for="simptomes">Símptomes (Què fa l'equip?) *</label>
+                            <textarea id="simptomes" name="simptomes" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="beeps">Senyals acústics o missatges d'error</label>
+                            <input type="text" id="beeps" name="beeps" placeholder="Ex: 3 beeps curts">
+                        </div>
+                        <div class="form-group">
+                            <label for="last-action">Darrera acció realitzada abans de l'error</label>
+                            <textarea id="last-action" name="last-action" rows="2"></textarea>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="urgencia">Nivell d'Urgència *</label>
+                        <select id="urgencia" name="urgencia" required>
+                            <option value="baixa">Baixa (Consulta/Manteniment)</option>
+                            <option value="mitjana">Mitjana (L'equip falla però funciona)</option>
+                            <option value="alta">Alta / Crítica (L'equip no encén)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Enviar Incidència a LOFIX</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Horari d'Atenció</h4>
+                    <p>Dl - Dv: 09:00h a 19:00h<br>Dissabtes: 10:00h a 14:00h</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Xarxes Socials</h4>
+                    <div class="social-icons">
+                        <span>Facebook</span> | <span>Instagram</span> | <span>LinkedIn</span>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <p><a href="#">Política de Privacitat</a><br>
+                    <a href="#">Avís Legal</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 LOFIX Manteniment Informàtic. Tots els drets reservats.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
